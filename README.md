@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+To run this project,
+
+open .env file and add your client_id from spotify dashboard and then open terminal and execute the following commands in sequence
+
+1.npm install
+2.npm start
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
