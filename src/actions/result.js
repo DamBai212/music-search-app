@@ -48,3 +48,36 @@ import {
       }
     };
   };
+
+  export const initiateLoadMoreAlbums = (url) => {
+    return async (dispatch) => {
+      try {
+        const result = await get(url);
+        return dispatch(addAlbums(result.albums));
+      } catch (error) {
+        console.log('error', error);
+      }
+    };
+  };
+
+  export const initiateLoadMoreArtists = (url) => {
+    return async (dispatch) => {
+      try {
+        const result = await get(url);
+        return dispatch(addArtists(result.artists));
+      } catch (error) {
+        console.log('error', error);
+      }
+    };
+  };
+  
+  export const initiateLoadMorePlaylist = (url) => {
+    return async (dispatch) => {
+      try {
+        const result = await get(url);
+        return dispatch(addPlaylist(result.playlists));
+      } catch (error) {
+        console.log('error', error);
+      }
+    };
+  };

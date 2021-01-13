@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import _ from 'lodash';
-// import music from '../images/music.jpeg';
+import music from '../images/music.jpeg';
 const AlbumsList = ({ albums }) => {
   return (
     <React.Fragment>
@@ -17,7 +17,7 @@ const AlbumsList = ({ albums }) => {
                     rel="noopener noreferrer"
                     className="card-image-link"
                   >
-                    {/* {!_.isEmpty(album.images) ? (
+                    {!_.isEmpty(album.images) ? (
                       <Card.Img
                         variant="top"
                         src={album.images[0].url}
@@ -25,7 +25,7 @@ const AlbumsList = ({ albums }) => {
                       />
                     ) : (
                       <img src={music} alt="" />
-                    )} */}
+                    )}
                   </a>
                   <Card.Body>
                     <Card.Title>{album.name}</Card.Title>

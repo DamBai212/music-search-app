@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import SearchResult from './SearchResult';
 import SearchForm from './SearchForm';
 import Header from './Header';
-// import {
-//   initiateGetResult,
-//   initiateLoadMoreAlbums,
-//   initiateLoadMorePlaylist,
-//   initiateLoadMoreArtists
-// } from '../actions/result';
+import {
+  initiateGetResult,
+  initiateLoadMoreAlbums,
+  initiateLoadMorePlaylist,
+  initiateLoadMoreArtists
+} from '../actions/result';
 import Loader from './Loader';
 
 const Dashboard = (props) => {
