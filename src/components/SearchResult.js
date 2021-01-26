@@ -4,9 +4,23 @@ import AlbumsList from './AlbumsList';
 import ArtistsList from './ArtistsList';
 import PlayList from './PlayList';
 import { Button } from 'react-bootstrap';
+import { Redirect } from 'react-router-dom';
 const SearchResult = (props) => {
-  const { loadMore, result, setCategory, selectedCategory } = props;
+  const { isValidSession, loadMore, result, setCategory, selectedCategory } = props;
   const { albums, artists, playlist } = result;
+
+  if (!isValidSession()) {
+    return (
+      <Redirect
+        to={{
+          pathname: '/',
+          state: {
+            session_expired: true
+          }
+        }}
+      />
+    );
+  }
   return (
     <React.Fragment>
       <div className="search-buttons">
